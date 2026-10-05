@@ -60,15 +60,8 @@ func odmianaGramatycznaLat(ilośćLat int) string {
 		return "rok"
 	}
 
-	var ostatniaCyfra int
-	var nast_ostatnia int
-	if ilośćLat < 100 {
-		ostatniaCyfra = ilośćLat % 10
-		nast_ostatnia = (ilośćLat / 10) % 10
-	} else if ilośćLat >= 100 {
-		ostatniaCyfra = ilośćLat % 100 % 10
-		nast_ostatnia = (ilośćLat / 100) % 10
-	}
+	ostatniaCyfra := ilośćLat % 10
+	nast_ostatnia := (ilośćLat / 10) % 10
 
 	if nast_ostatnia != 1 && (ostatniaCyfra >= 2 && ostatniaCyfra <= 4) {
 		return "lata"
