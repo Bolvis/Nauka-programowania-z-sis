@@ -7,7 +7,8 @@ func main() {
 	fmt.Println("Chcesz dodać czy odjąć? (+/-)")
 	var znak string
 	fmt.Scanln(&znak)
-	if znak == "+" {
+	switch znak {
+	case "+":
 		fmt.Println("Wybrałeś dodawanie")
 		var a, b int
 		fmt.Println("Podaj pierwszą liczbę:")
@@ -15,7 +16,7 @@ func main() {
 		fmt.Println("Podaj drugą liczbę:")
 		fmt.Scanln(&b)
 		fmt.Printf("Wynik dodawania: %df\n", a+b)
-	} else if znak == "-" {
+	case "-":
 		fmt.Println("Wybrałeś odejmowanie")
 		var a, b int
 		fmt.Println("Podaj pierwszą liczbę:")
@@ -23,7 +24,7 @@ func main() {
 		fmt.Println("Podaj drugą liczbę:")
 		fmt.Scanln(&b)
 		fmt.Printf("Wynik odejmowania: %d\n", a-b)
-	} else {
+	default:
 		fmt.Println("Niepoprawny znak")
 	}
 
